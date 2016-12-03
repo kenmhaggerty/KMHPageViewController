@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KMHPageViewController">
+            <connections>
+                <outlet property="collectionView" destination="lok-sE-RnJ" id="PdM-4L-1yQ"/>
+                <outlet property="pageControl" destination="J4n-uW-akx" id="bjJ-6a-NbT"/>
+                <outlet property="view" destination="iN0-l3-epB" id="OdN-Jb-K7P"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="lok-sE-RnJ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="oUA-ah-Yte">
+                        <size key="itemSize" width="320" height="480"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="S7X-B2-QE2"/>
+                        <outlet property="delegate" destination="-1" id="wGK-NE-hTI"/>
+                    </connections>
+                </collectionView>
+                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="J4n-uW-akx">
+                    <rect key="frame" x="140" y="443" width="39" height="37"/>
+                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </pageControl>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lok-sE-RnJ" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="gdp-IY-etc"/>
+                <constraint firstItem="lok-sE-RnJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="h3n-pS-dSV"/>
+                <constraint firstAttribute="bottom" secondItem="J4n-uW-akx" secondAttribute="bottom" id="h75-bZ-mxm"/>
+                <constraint firstItem="lok-sE-RnJ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="hdq-uh-dMZ"/>
+                <constraint firstItem="J4n-uW-akx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jf3-TY-V78"/>
+                <constraint firstItem="lok-sE-RnJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="per-bj-1v5"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
