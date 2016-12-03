@@ -145,7 +145,7 @@
 #pragma mark // Private Methods //
 
 - (void)setup {
-    self.view = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:self options:nil].firstObject;
+    self.view = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([KMHPageViewController class]) owner:self options:nil].firstObject;
     [self.collectionView registerClass:[KMHPageViewCell class] forCellWithReuseIdentifier:@"cell"];
 }
 
