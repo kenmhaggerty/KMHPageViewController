@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="KMHPageViewTabBarCell">
+            <connections>
+                <outlet property="imageView" destination="ZBO-6t-1wv" id="V0U-cj-o6g"/>
+                <outlet property="label" destination="Cx0-lh-U8F" id="coc-Pc-UCe"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="tabBarCell" id="3zZ-bD-iNi" customClass="KMHPageViewTabBarCell">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2u5-EW-AKW">
+                        <rect key="frame" x="9.5" y="1.5" width="31" height="48.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZBO-6t-1wv">
+                                <rect key="frame" x="0.5" y="0.0" width="30" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="n6B-1B-LNZ"/>
+                                    <constraint firstAttribute="width" constant="30" id="yxi-vE-woV"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cx0-lh-U8F">
+                                <rect key="frame" x="0.0" y="34" width="31" height="14.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Cx0-lh-U8F" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2u5-EW-AKW" secondAttribute="leading" id="5Ly-Fz-2LG"/>
+                            <constraint firstItem="ZBO-6t-1wv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2u5-EW-AKW" secondAttribute="leading" id="8Pj-sq-cie"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Cx0-lh-U8F" secondAttribute="bottom" id="Cdm-0G-5sG"/>
+                            <constraint firstItem="ZBO-6t-1wv" firstAttribute="top" secondItem="2u5-EW-AKW" secondAttribute="top" priority="750" id="FGo-PS-dfG"/>
+                            <constraint firstItem="ZBO-6t-1wv" firstAttribute="leading" secondItem="2u5-EW-AKW" secondAttribute="leading" priority="750" id="HbQ-3Z-Yzt"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ZBO-6t-1wv" secondAttribute="trailing" id="KO4-k9-4aI"/>
+                            <constraint firstItem="Cx0-lh-U8F" firstAttribute="top" secondItem="2u5-EW-AKW" secondAttribute="top" priority="750" id="KlI-Pn-3rh"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Cx0-lh-U8F" secondAttribute="trailing" id="L5X-C8-3de"/>
+                            <constraint firstItem="ZBO-6t-1wv" firstAttribute="centerX" secondItem="2u5-EW-AKW" secondAttribute="centerX" priority="750" id="LXP-7z-uqK"/>
+                            <constraint firstAttribute="trailing" secondItem="Cx0-lh-U8F" secondAttribute="trailing" priority="750" id="Lpw-pv-kDp"/>
+                            <constraint firstAttribute="bottom" secondItem="ZBO-6t-1wv" secondAttribute="bottom" priority="750" id="Mvf-DJ-goT"/>
+                            <constraint firstItem="Cx0-lh-U8F" firstAttribute="centerY" secondItem="2u5-EW-AKW" secondAttribute="centerY" priority="750" id="UfS-cp-FlY"/>
+                            <constraint firstItem="ZBO-6t-1wv" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2u5-EW-AKW" secondAttribute="top" id="WlR-4l-Lfu"/>
+                            <constraint firstItem="Cx0-lh-U8F" firstAttribute="leading" secondItem="2u5-EW-AKW" secondAttribute="leading" priority="750" id="Y6F-64-PgF"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ZBO-6t-1wv" secondAttribute="bottom" id="YNH-Hz-Jk0"/>
+                            <constraint firstItem="Cx0-lh-U8F" firstAttribute="top" secondItem="ZBO-6t-1wv" secondAttribute="bottom" constant="4" id="a6J-gr-6U5"/>
+                            <constraint firstItem="Cx0-lh-U8F" firstAttribute="centerX" secondItem="2u5-EW-AKW" secondAttribute="centerX" priority="750" id="aNm-Uc-0GE"/>
+                            <constraint firstItem="ZBO-6t-1wv" firstAttribute="centerY" secondItem="2u5-EW-AKW" secondAttribute="centerY" priority="750" id="e8v-te-uto"/>
+                            <constraint firstAttribute="bottom" secondItem="Cx0-lh-U8F" secondAttribute="bottom" priority="750" id="rDs-Lc-mML"/>
+                            <constraint firstAttribute="trailing" secondItem="ZBO-6t-1wv" secondAttribute="trailing" priority="750" id="u5Q-d2-xw4"/>
+                            <constraint firstItem="Cx0-lh-U8F" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2u5-EW-AKW" secondAttribute="top" id="wV7-hx-piQ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="2u5-EW-AKW" firstAttribute="centerX" secondItem="3zZ-bD-iNi" secondAttribute="centerX" id="jEA-cN-UuN"/>
+                <constraint firstItem="2u5-EW-AKW" firstAttribute="centerY" secondItem="3zZ-bD-iNi" secondAttribute="centerY" id="nUe-Z8-MRI"/>
+            </constraints>
+            <size key="customSize" width="153" height="140"/>
+            <connections>
+                <outlet property="imageView" destination="ZBO-6t-1wv" id="Lca-Ln-KOF"/>
+                <outlet property="label" destination="Cx0-lh-U8F" id="rw1-9e-CdD"/>
+            </connections>
+            <point key="canvasLocation" x="102.5" y="106"/>
+        </collectionViewCell>
+    </objects>
+</document>

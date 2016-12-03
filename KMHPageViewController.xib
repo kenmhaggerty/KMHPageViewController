@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="collectionView" destination="lok-sE-RnJ" id="PdM-4L-1yQ"/>
                 <outlet property="pageControl" destination="J4n-uW-akx" id="bjJ-6a-NbT"/>
+                <outlet property="tabBarCollectionView" destination="M5f-lB-PJv" id="oXy-4o-Wq7"/>
                 <outlet property="view" destination="iN0-l3-epB" id="OdN-Jb-K7P"/>
             </connections>
         </placeholder>
@@ -35,19 +36,64 @@
                         <outlet property="delegate" destination="-1" id="wGK-NE-hTI"/>
                     </connections>
                 </collectionView>
-                <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="J4n-uW-akx">
-                    <rect key="frame" x="140" y="443" width="39" height="37"/>
-                    <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                </pageControl>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eME-ZN-VPv" userLabel="Footer View">
+                    <rect key="frame" x="140.5" y="393" width="39" height="87"/>
+                    <subviews>
+                        <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uJg-ns-aOx" userLabel="Background">
+                            <rect key="frame" x="-140.5" y="-0.5" width="320" height="87"/>
+                            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        </view>
+                        <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" hidesForSinglePage="YES" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="J4n-uW-akx">
+                            <rect key="frame" x="-0.5" y="50" width="39" height="37"/>
+                            <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </pageControl>
+                        <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="M5f-lB-PJv">
+                            <rect key="frame" x="-5.5" y="0.0" width="50" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="JXg-y3-equ"/>
+                                <constraint firstAttribute="height" constant="50" id="rVw-OK-Wev"/>
+                            </constraints>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="PYo-em-GXr">
+                                <size key="itemSize" width="50" height="50"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="trd-Vp-1gv"/>
+                                <outlet property="delegate" destination="-1" id="bIC-ze-XV6"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="J4n-uW-akx" firstAttribute="height" secondItem="eME-ZN-VPv" secondAttribute="height" priority="250" id="67v-bk-e7G"/>
+                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="M5f-lB-PJv" secondAttribute="bottom" id="70h-2V-Ybj"/>
+                        <constraint firstAttribute="bottom" secondItem="J4n-uW-akx" secondAttribute="bottom" id="J87-KU-4GF"/>
+                        <constraint firstItem="M5f-lB-PJv" firstAttribute="centerX" secondItem="eME-ZN-VPv" secondAttribute="centerX" id="M9h-et-aM9"/>
+                        <constraint firstItem="J4n-uW-akx" firstAttribute="width" relation="lessThanOrEqual" secondItem="eME-ZN-VPv" secondAttribute="width" id="QL9-ab-MtT"/>
+                        <constraint firstItem="M5f-lB-PJv" firstAttribute="top" secondItem="eME-ZN-VPv" secondAttribute="top" id="QRI-sD-riP"/>
+                        <constraint firstItem="J4n-uW-akx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="M5f-lB-PJv" secondAttribute="bottom" id="TaY-7q-gEi"/>
+                        <constraint firstItem="uJg-ns-aOx" firstAttribute="height" secondItem="eME-ZN-VPv" secondAttribute="height" id="lvF-kw-6FJ"/>
+                        <constraint firstItem="J4n-uW-akx" firstAttribute="centerX" secondItem="eME-ZN-VPv" secondAttribute="centerX" id="nfv-Rx-A8T"/>
+                        <constraint firstItem="uJg-ns-aOx" firstAttribute="centerY" secondItem="eME-ZN-VPv" secondAttribute="centerY" id="pvy-5v-4Ej"/>
+                        <constraint firstItem="J4n-uW-akx" firstAttribute="height" relation="lessThanOrEqual" secondItem="eME-ZN-VPv" secondAttribute="height" id="q3l-xl-mfW"/>
+                        <constraint firstItem="J4n-uW-akx" firstAttribute="width" secondItem="eME-ZN-VPv" secondAttribute="width" priority="250" id="xUJ-4N-u1u"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="eME-ZN-VPv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="AjU-oD-2r0"/>
+                <constraint firstAttribute="bottom" secondItem="eME-ZN-VPv" secondAttribute="bottom" id="ZvI-3m-LKQ"/>
                 <constraint firstItem="lok-sE-RnJ" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="gdp-IY-etc"/>
                 <constraint firstItem="lok-sE-RnJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="h3n-pS-dSV"/>
-                <constraint firstAttribute="bottom" secondItem="J4n-uW-akx" secondAttribute="bottom" id="h75-bZ-mxm"/>
                 <constraint firstItem="lok-sE-RnJ" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="hdq-uh-dMZ"/>
-                <constraint firstItem="J4n-uW-akx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="jf3-TY-V78"/>
+                <constraint firstItem="uJg-ns-aOx" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" id="nUF-hi-Lhh"/>
                 <constraint firstItem="lok-sE-RnJ" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="per-bj-1v5"/>
+                <constraint firstItem="uJg-ns-aOx" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="uXu-m3-WL0"/>
+                <constraint firstItem="eME-ZN-VPv" firstAttribute="width" relation="lessThanOrEqual" secondItem="iN0-l3-epB" secondAttribute="width" id="yYX-co-NPj"/>
             </constraints>
         </view>
     </objects>
