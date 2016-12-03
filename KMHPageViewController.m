@@ -147,6 +147,7 @@
 - (void)setup {
     self.view = [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([KMHPageViewController class]) owner:self options:nil].firstObject;
     [self.collectionView registerClass:[KMHPageViewCell class] forCellWithReuseIdentifier:@"cell"];
+    self.automaticallyAdjustsScrollViewInsets = NO;
 }
 
 @end
