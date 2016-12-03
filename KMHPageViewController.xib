@@ -40,7 +40,6 @@
                     <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                 </pageControl>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="lok-sE-RnJ" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" id="gdp-IY-etc"/>
                 <constraint firstItem="lok-sE-RnJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="h3n-pS-dSV"/>
