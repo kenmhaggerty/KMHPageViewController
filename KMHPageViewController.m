@@ -124,9 +124,6 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(nonnull NSIndexPath *)indexPath {
     KMHPageViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     cell.view = self.viewControllers[indexPath.item].view;
-    cell.view.backgroundColor = indexPath.item % 2 ? [UIColor redColor] : [UIColor blueColor]; // test
-//    [cell.view.superview setNeedsUpdateConstraints];
-//    [cell.view.superview layoutIfNeeded];
     return cell;
 }
 
