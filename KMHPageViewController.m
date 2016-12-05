@@ -82,7 +82,7 @@
 }
 
 - (void)setSelectedIndex:(NSUInteger)selectedIndex {
-    self.pageControl.currentPage = selectedIndex;
+    [self setSelectedIndex:selectedIndex animated:NO];
 }
 
 - (NSUInteger)selectedIndex {
@@ -111,6 +111,19 @@
     self.collectionView.allowsSelection = NO;
 }
 
+#pragma mark // Public Methods (General) //
+
+- (void)setSelectedIndex:(NSUInteger)selectedIndex animated:(BOOL)animated {
+    if (selectedIndex == self.selectedIndex) {
+        return;
+    }
+    
+    [self.collectionView setContentOffset:CGPointMake(selectedIndex*CGRectGetWidth(self.collectionView.frame), self.collectionView.contentOffset.y) animated:animated];
+    if (!animated) {
+        self.pageControl.currentPage = selectedIndex;
+    }
+}
+
 #pragma mark // Delegated Methods (UICollectionViewDataSource) //
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
@@ -136,6 +149,10 @@
 #pragma mark // Delegated Methods (UIScrollViewDelegate) //
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    self.selectedIndex = roundf(scrollView.contentOffset.x / scrollView.frame.size.width);
+}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
     self.selectedIndex = roundf(scrollView.contentOffset.x / scrollView.frame.size.width);
 }
 

@@ -18,4 +18,9 @@
 
 @interface KMHPageViewController : UITabBarController
 @property (nonatomic, strong) IBOutlet UIPageControl *pageControl;
+
+// GENERAL //
+
+- (void)setSelectedIndex:(NSUInteger)selectedIndex animated:(BOOL)animated;
+
 @end
