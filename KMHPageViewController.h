@@ -23,4 +23,8 @@
 
 - (void)setSelectedIndex:(NSUInteger)selectedIndex animated:(BOOL)animated;
 
+// IBACTIONS //
+
+- (IBAction)close:(id)sender;
+
 @end

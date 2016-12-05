@@ -124,6 +124,17 @@
     }
 }
 
+#pragma mark // Public Methods (IBActions) //
+
+- (IBAction)close:(id)sender {
+    if (self.navigationController && (self.navigationController.viewControllers.count > 1)) {
+        [self.navigationController popViewControllerAnimated:YES];
+        return;
+    }
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
 #pragma mark // Delegated Methods (UICollectionViewDataSource) //
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
