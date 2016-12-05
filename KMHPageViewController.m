@@ -72,7 +72,7 @@
 
 #pragma mark // Setters and Getters (Overwritten) //
 
-- (void)setViewControllers:(NSArray<__kindof UIViewController *> *)viewControllers {
+- (void)setViewControllers:(NSArray <__kindof UIViewController *> *)viewControllers {
     [super setViewControllers:viewControllers];
     
     [self.collectionView reloadData];
